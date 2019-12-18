@@ -1,18 +1,94 @@
 /* -------------------------------- variables ------------------------------- */
+
 ::root{
     --main-font: 'Lato', sans-serif;
     --main-font-color-dark:#17202A;
     --main-font-color-light: #6FFFE9;
 }
 
+/* --------------------------- main elements style -------------------------- */
+
 html{
-    color:var(--main-font-color-dark)
-    font-family: var(--main-font)
+    color:var(--main-font-color-dark);
+    font-family: var(--main-font);
     font-weight: 300;
-    font-size: 20px;
+    font-size: 10px;
     /* optimised text rendering */
     text-rendering: optimizeLegibility;
+    /* make scroll smoother for anchore links */
+    scroll-behavior: smooth;
 }
+
+section{
+    padding: 3.9rem 0;
+}
+
+img{
+    width: 100%;
+    max-width: 100%;
+}
+
+a{
+    text-decoration: none;
+}
+
+p{
+    font-size: 1.6rem;
+}
+
+.container{
+    width: 100%;
+    /* the container will be 1225px for very large displays and for displays under that the width will be 100%*/
+    max-width: 122.5rem;
+    /* center the conatiner in the middle */
+    margin: 0 auto;
+    padding: 0 2.4rem;
+}
+
+/* --------------------------------- header --------------------------------- */
+
+header{
+    width: 100%;
+    /* stick the nav-menu on top and over the other elements */
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,.5), transparent);
+}
+
+.nav{
+    height: 7.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-toggle{
+    /* place the toggle icons top right*/
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 2.5rem;
+    /* icon style */
+    color: #fff;
+    font-size: 2.2rem;
+    cursor: pointer;
+    /* bring the toggles in front of every other element */
+    z-index: 1500;
+}
+
+.fa-times{
+    display: none !important;
+}
+
+.nav-list{
+    
+}
+
+
+
+
 
 .logo img{
     max-width: 50px;
