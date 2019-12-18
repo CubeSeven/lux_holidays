@@ -1,0 +1,19 @@
+/* -------------------------------- variables ------------------------------- */
+::root{
+    --main-font: 'Lato', sans-serif;
+    --main-font-color-dark:#17202A;
+    --main-font-color-light: #6FFFE9;
+}
+
+html{
+    color:var(--main-font-color-dark)
+    font-family: var(--main-font)
+    font-weight: 300;
+    font-size: 20px;
+    /* optimised text rendering */
+    text-rendering: optimizeLegibility;
+}
+
+.logo img{
+    max-width: 50px;
+}
