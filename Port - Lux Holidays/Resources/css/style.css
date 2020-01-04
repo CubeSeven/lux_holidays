@@ -1,9 +1,11 @@
 /* -------------------------------- variables ------------------------------- */
 
-::root{
+:root{
     --main-font: 'Lato', sans-serif;
     --main-font-color-dark:#17202A;
     --main-font-color-light: #6FFFE9;
+    --transparency-dark: rgba(0,0,0,.8);
+    
 }
 
 /* --------------------------- main elements style -------------------------- */
@@ -83,12 +85,51 @@ header{
 }
 
 .nav-list{
-    
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 100vh;
+    background-color: var(--main-font-color-dark);
+    padding: 4.4rem !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    z-index: 1250;
+    transform: translateX(-100%);
+    transition: transform .5s;
 }
 
+nav::before{
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--transparency-dark);
+    z-index: 1000;
+    opacity: 0;
+    transform: scale(0);
+    transition: opacity .5s;
+}
 
+.open .fas-times{
+    display: block;
+}
 
+.open .fas-bars{
+    display: none;
+}
 
+.open .nav-list{
+    transform: translateY(0);
+}
+
+.open .nav::before{
+    opacity: 1;
+    transform: scale(1);
+}
 
 .logo img{
     max-width: 50px;
